@@ -1,0 +1,26 @@
+ 
+  .footer {
+    background: linear-gradient(to right, #182529, #94aec0);
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
+    position: relative; /* Allow footer to be placed after the content */
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 1000;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+  }
+  
+  .footer-container p {
+    margin: 0;
+    font-size: 0.9em;
+  }

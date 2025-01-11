@@ -1,0 +1,411 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full height of the viewport */
+  }
+
+
+
+
+  
+  .content {
+    flex: 1; /* Push footer to the bottom if content is short */
+  }
+  
+  .title{
+  margin-top: 0%;
+  color: whitesmoke
+  }
+  
+  .tagline {
+    font:inherit;
+    font-size: 1.2em;
+    color: #fff;
+    opacity: 0.8;
+    margin-bottom: 30px;
+  }
+  
+  
+
+
+  
+
+
+  
+  .side-navbar { 
+    
+    position: fixed;
+    left: -100px; /* Initially hidden off the screen */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+    animation: slideInNavbar 1s ease-in-out forwards; /* Slide-in animation */
+  }
+
+
+
+
+  .side-navbar.hidden {
+    transform: translateX(-150%); /* Hide off-screen */
+  }
+  
+  @keyframes slideInNavbar {
+    from {
+      left: -100px; /* Start off-screen */
+      opacity: 0; /* Fully transparent */
+    }
+    to {
+      left: 20px; /* Final position */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  
+  .side-navbar a {
+    text-decoration: none;
+    
+  }
+  
+  
+  
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right, #182529, #94aec0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
+    font-size: 1.5em;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .icon-circle:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to bottom right, #7f5af0, #ffd700);
+    box-shadow: 0 0 15px rgba(127, 90, 240, 0.8);
+    
+
+  
+  }
+  
+  .icon-circle.active {
+    background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+    box-shadow: 0 0 10px rgba(255, 126, 95, 0.8);
+    background-color: #4a00e0; /* Highlight color */
+  }
+  
+  
+  /* Fade-in Animation for Description */
+  .description {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInDescription 2s ease-in-out forwards;
+    line-height: 1.5; /* Improve readability */
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto 20px; /* Center align with space */
+  }
+  
+  @keyframes fadeInDescription {
+    from {
+      opacity: 0; /* Start invisible */
+      transform: translateY(10px); /* Slight upward movement */
+    }
+    to {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Final position */
+    }
+  }
+  
+  /* About Section */
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh; /* Full page height */
+    padding: 20px;
+    background: linear-gradient(to right, #182529, #94aec0);
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .subtitle {
+    font-size: 1.5em;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+  
+  .contact-info {
+    margin: 15px 0;
+    font-size: 1em;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .cta-button:hover {
+    
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(255, 126, 95, 0.5);
+    animation: bounce 0.5s;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  .cta-button:active {
+    transform: scale(0.95);
+  }
+ 
+  
+  .social-links {
+    display: flex;
+    gap: 15px; /* Space between icons */
+  }
+  
+  .social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .social-links a:hover {
+    color: #ffd700; /* Gold color on hover */
+    transform: scale(1.2);
+    box-shadow: 0px 5px 15px rgba(127, 90, 240, 0.5);
+  }
+  
+  .social-links a:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ffd700; /* Focus effect for accessibility */
+  }
+  
+  
+  /*flash cards */
+  
+  .professional-summary-container {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef); /* Light gray gradient */
+    padding: 10px 10px 60px 60px;
+    text-align: center;
+    color: #333;
+    overflow: hidden; /* Prevent overflow of sliding cards */
+    position: relative;
+
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: linear-gradient(to right, #182529, #94aec0);
+    /*opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s, transform 0.5s;*/
+  }
+
+  .section-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 768px) {
+    .flash-card-container {
+      gap: 10px;
+       /* Reduce gap on smaller screens */
+    }
+  
+    .flash-card {
+        width: 100%;
+        margin: 10px 0; /* Smaller cards on small screens */
+    }
+    .side-navbar {
+      display: none; /* Hide side navbar on small screens */
+    }
+  
+    .horizontal-navbar {
+      display: flex; /* Display horizontal navbar */
+    }
+  }
+  
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(to right, #182529, #94aec0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
+    font-size: 1.5em;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  
+  
+  }
+  .flash-card-container {
+    display: flex; /* Align cards horizontally */
+    gap: 20px; /* Space between cards */
+    overflow: hidden; /* Hide overflowing cards outside the container */
+    transform: translateX(0); /* Start at the first visible card */
+    transition: transform 0.5s ease-in-out; /* Smooth scrolling */
+    min-width: calc(800px * 5 + 20px * 4); /* Enough space for 5 cards and 20px gaps */
+    justify-content: start; /* Start cards from the left */
+    
+  }
+
+
+  
+  
+  /* Flash card styling */
+  .flash-card {
+    flex-shrink: 0; /* Prevent cards from shrinking */
+    width: 300px; /* Set a fixed width */
+    background: #fff; /* Card background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Inner padding */
+    text-align: left; /* Align text */
+    font-size: 1em; /* Font size */
+    margin: 0 10px; /* Add horizontal margin for spacing */
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+  }
+  
+  /* Highlight the next card */
+  .flash-card.highlight {
+    transform: scale(1.2); /* Enlarge the highlighted card */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* Add a stronger shadow */
+  }
+  
+  .flash-card:hover {
+    transform: translateY(-10px); /* Lift up on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+  }
+  
+  
+  /* flash cards */
+
+  /* Responsive Navbar */
+.responsive-navbar {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Space between button and navbar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #333; /* Background color for the navbar */
+  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+}
+
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  background: linear-gradient(to bottom right, #7f5af0, #ffd700);;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-toggle.scrolled {
+  background: linear-gradient(to right, #182529, #94aec0); /* Change background when scrolled */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.horizontal-navbar {
+  position: fixed;
+  top: 6px;
+  left: 80px;
+  width: 100%;
+  background-color: none;
+  display: flex;
+  padding: 10px 0;
+  z-index: 1000;
+  gap: 30px; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.horizontal-navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.horizontal-navbar a:hover {
+  color: #ffd700; /* Highlight color */
+}
+
+/* Responsive Navbar */

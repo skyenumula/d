@@ -1,0 +1,126 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+    <div class="content">
+<div calss="responsive-navbar">
+  <button 
+    class="menu-toggle" 
+    *ngIf="isSmallScreen" 
+    [class.scrolled]="isScrolled" 
+    (click)="toggleNavbar()">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <div class="horizontal-navbar" *ngIf="isSmallScreen && isNavbarVisible" (click)="toggleNavbar()">
+   
+    <a href="#professional-summary" title="Professional Summary">
+      <div class="icon-circle"><i class="fas fa-briefcase"></i></div>
+    </a>
+   
+    <a href="#projects" title="Projects">
+      <div class="icon-circle"><i class="fas fa-tasks"></i></div>
+    </a>
+    <a href="#roadmap-container" title="Experience">
+        <div class="icon-circle"><i class="fas fa-code"></i></div>
+      </a>
+    <a href="#contact" title="Contact">
+      <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+    </a>
+    
+  </div>
+  <div class="side-navbar" *ngIf="!isSmallScreen || isNavbarVisible" >
+    <a href="#about" title="About">
+      <div class="icon-circle"><i class="fas fa-user"></i></div>
+    </a>
+    <a href="#professional-summary" title="Professional Summary">
+      <div class="icon-circle"><i class="fas fa-briefcase"></i></div>
+    </a>
+   
+    <a href="#projects" title="Projects">
+      <div class="icon-circle"><i class="fas fa-tasks"></i></div>
+    </a>
+    <a href="#roadmap-container" title="Experience">
+        <div class="icon-circle"><i class="fas fa-code"></i></div>
+      </a>
+    <a href="#contact" title="Contact">
+      <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+    </a>
+    
+  </div>
+</div>
+  
+  <div id="about" class="about-container">
+    <h1 class="title">
+      <span class="fade-in">Srikanth Yenumula</span>
+    </h1>
+    <h2 class="tagline">
+      <span class="fade-in"> ServiceNow Developer</span>
+    </h2>
+    <p class="description typing">
+      I am an experienced ServiceNow developer with a strong foundation in Computer Science. My expertise lies in creating custom applications, workflows, and integrations on the ServiceNow platform. I am passionate about problem-solving and delivering efficient solutions to enhance system performance. I thrive in collaborative environments and am always ready to contribute to dynamic teams.
+    </p>
+    <div class="contact-info">
+      <p><strong>Email:</strong> srikanth.emailexample.com</p>
+      <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+    </div>
+    <!--<button class="cta-button" (click)="downloadResume()">Download Resume</button>-->
+  </div>
+  
+
+
+
+
+
+  <div id="professional-summary" class="section professional-summary-container">
+    <h2 class="section-title">Professional Summary</h2>
+    <div class="flash-card-container">
+      <div class="flash-card">
+        <p>
+          <strong>Experience:</strong> 5+ years of expertise in designing, implementing, 
+          and maintaining ServiceNow workflows and integrations.
+        </p>
+      </div>
+      <div class="flash-card">
+        <p>
+          <strong>Custom Applications:</strong> Developed and deployed over 15 custom 
+          ServiceNow applications tailored to client needs.
+        </p>
+      </div>
+      <div class="flash-card">
+        <p>
+          <strong>Integration:</strong> Integrated third-party tools and APIs to automate 
+          workflows, improving efficiency and reducing manual effort.
+        </p>
+      </div>
+      <div class="flash-card">
+        <p>
+          <strong>Teamwork:</strong> Trained and mentored junior developers, fostering a 
+          productive and collaborative team environment.
+        </p>
+      </div>
+      <div class="flash-card">
+        <p>
+          <strong>Performance:</strong> Recognized for implementing enhancements that 
+          resulted in 25% faster system workflows.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  

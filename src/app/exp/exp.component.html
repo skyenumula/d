@@ -1,0 +1,76 @@
+<div id="roadmap-container" class="roadmap-container">
+  <h2 class="section-title">My Journey</h2>
+
+  <!-- Toggle Buttons
+  <div class="roadmap-buttons">
+    <button class="toggle-button" (click)="showRoadmap('experience')">Experience Roadmap</button>
+    <button class="toggle-button" (click)="showRoadmap('education')">Education Roadmap</button>
+  </div> -->
+  
+  <div class="roadmap-buttons ">
+    <button
+      class="toggle-button" 
+      [ngClass]="{ center: activeRoadmap === 'experience', hidden: activeRoadmap === 'education' }"
+      (click)="showRoadmap('experience') " 
+    >
+     Experience <br> Roadmap
+    </button>
+    <button
+      class="toggle-button"
+      [ngClass]="{ hidden1: activeRoadmap === 'education', hidden2: activeRoadmap === 'experience' }"
+      (click)="showRoadmap('education') " 
+    >
+      Education <br> Roadmap
+    </button>
+  </div>
+
+  <br><br>
+
+
+  <!-- Timeline -->
+  <div *ngIf="activeRoadmap === 'experience'" class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fas fa-briefcase"></i>
+      </div>
+      <div class="timeline-content">
+        <h3>Intern</h3>
+        <p>Wipro Ltd</p>
+        <p>Designed and developed the front-end of a landing page using Angular.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fas fa-tools"></i>
+      </div>
+      <div class="timeline-content">
+        <h3>ServiceNow Developer</h3>
+        <p>Global Client</p>
+        <p>Implemented ITSM workflows for global incident management, reducing resolution time by 25%.</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="activeRoadmap === 'education'" class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fas fa-university"></i>
+      </div>
+      <div class="timeline-content">
+        <h3>Bachelor's Degree</h3>
+        <p>University of XYZ</p>
+        <p>Studied Computer Science and specialized in web development and algorithms.</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-icon">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <div class="timeline-content">
+        <h3>Master's Degree</h3>
+        <p>University of ABC</p>
+        <p>Pursued a Master's in IT focusing on cloud computing and data analytics.</p>
+      </div>
+    </div>
+  </div>
+</div>
